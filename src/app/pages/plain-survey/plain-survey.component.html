@@ -1,0 +1,156 @@
+<div class="header bg-gradient-info py-7 py-lg-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <!-- Card stats -->
+    </div>
+  </div>
+</div>
+
+<!-- Page content -->
+<div class="container mt--7">
+  <!-- Table -->
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-8">
+      <div class="card bg-secondary shadow">
+        <div class="card-header">
+          <h3 class="mb-0">Website Feedback Survey</h3>
+        </div>
+        <div class="card-body">
+
+          <!-- Question 1-->
+          <div class="row mb-3">
+            <div class="col-12 mb-3">
+              <h4 class="text-muted">1. What do you think about the new movie ?</h4>
+            </div>
+            <div class="col-12 mb-3">
+              <div class="row no-gutters">
+
+                <div class="col">
+                  <button class="btn btn-outline-primary rounded border-0">1</button>
+                </div>
+          
+                <div class="col">
+                  <button class="btn btn-outline-primary rounded border-0">2</button>
+                </div>
+          
+                <div class="col">
+                  <button class="btn btn-outline-primary rounded border-0">3</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-primary rounded border-0">4</button>
+                </div>
+          
+                <div class="col">
+                  <button class="btn btn-primary rounded border-0">5</button>
+                </div>
+          
+                <div class="col">
+                  <button class="btn btn-outline-primary rounded border-0">6</button>
+                </div>
+          
+                <div class="col">
+                  <button class="btn btn-outline-primary rounded border-0">7</button>
+                </div>
+
+                <div class="col">
+                  <button class="btn btn-outline-primary rounded border-0">8</button>
+                </div>
+
+                <div class="col">
+                  <button class="btn btn-outline-primary rounded border-0">9</button>
+                </div>
+
+                <div class="col">
+                  <button class="btn btn-outline-primary rounded border-0">10</button>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+              <form [formGroup]="radioGroupForm" class="d-none">
+                <div class="btn-group d-block d-lg-inline-flex" role="group" ngbRadioGroup name="radioGroupForm"
+                  formControlName="model">
+                  <label ngbButtonLabel class="btn-outline-primary rounded border-0 border-lg-1 mr-1 mr-lg-3 custom-px-75 px-lg-3" (click)="setSelectedRadio(1)">
+                    <input ngbButton type="radio" class="d-none" [value]="1">1
+                  </label>
+                  <label ngbButtonLabel class="btn-outline-primary rounded border-0 border-lg-1 mr-1 mr-lg-3 custom-px-75 px-lg-3" (click)="setSelectedRadio(2)">
+                    <input ngbButton type="radio" class="d-none" value="2">2
+                  </label>
+                  <label ngbButtonLabel class="btn-outline-primary rounded border-0 border-lg-1 mr-1 mr-lg-3 custom-px-75 px-lg-3" (click)="setSelectedRadio(3)">
+                    <input ngbButton type="radio" class="d-none" [value]="3">3
+                  </label>
+                  <label ngbButtonLabel class="btn-outline-primary rounded border-0 border-lg-1 mr-1 mr-lg-3 custom-px-75 px-lg-3">
+                    <input ngbButton type="radio" class="d-none" [value]="4" (click)="setSelectedRadio(4)">4
+                  </label>
+                  <label ngbButtonLabel class="btn-outline-primary rounded border-0 border-lg-1 mr-1 mr-lg-3 custom-px-75 px-lg-3" (click)="setSelectedRadio(5)">
+                    <input ngbButton type="radio" class="d-none" value="5">5
+                  </label>
+                  <label ngbButtonLabel class="btn-outline-primary rounded border-0 border-lg-1 mr-1 mr-lg-3 custom-px-75 px-lg-3" (click)="setSelectedRadio(5)">
+                    <input ngbButton type="radio" class="d-none" value="6">6
+                  </label>
+                  <label ngbButtonLabel class="btn-outline-primary rounded border-0 border-lg-1 mr-1 mr-lg-3 custom-px-75 px-lg-3" (click)="setSelectedRadio(5)">
+                    <input ngbButton type="radio" class="d-none" value="7">7
+                  </label>
+                  <label ngbButtonLabel class="btn-outline-primary rounded border-0 border-lg-1 mr-1 mr-lg-3 custom-px-75 px-lg-3" (click)="setSelectedRadio(5)">
+                    <input ngbButton type="radio" class="d-none" value="8">8
+                  </label>
+                  <label ngbButtonLabel class="btn-outline-primary rounded border-0 border-lg-1 mr-1 mr-lg-3 custom-px-75 px-lg-3" (click)="setSelectedRadio(5)">
+                    <input ngbButton type="radio" class="d-none" value="9">9
+                  </label>
+                  <label ngbButtonLabel class="btn-outline-primary rounded border-0 border-lg-1 mr-1 mr-lg-3 custom-px-75 px-lg-3" (click)="setSelectedRadio(5)">
+                    <input ngbButton type="radio" class="d-none" value="10">10
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+
+
+
+          <!-- Question 2-->
+          <div class="row mb-3">
+            <div class="col-12 mb-3">
+              <h4 class="text-muted">2. Tell us your thoughts</h4>
+            </div>
+            <div class="col-12 mb-3">
+              <textarea rows="5" class="form-control form-control-alternative" placeholder="Type Here"></textarea>
+            </div>
+          </div>
+
+          <!-- Question 3-->
+          <div class="row mb-">
+            <div class="col-12 mb-3">
+              <h4 class="text-muted">3. Slide this progress bar for fun!</h4>
+            </div>
+            <div class="col-12 mb-3">
+
+
+              <div class="col-12 mb-3">
+                <ngb-progressbar [value]="progressbar2" type="success"></ngb-progressbar>
+              </div>
+
+              <div class="col-12">
+                <button type="button" class="btn btn-outline-primary" (click)="slideProgressBar()">Press to Slide</button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row mt-5">
+            <div class="col-12 text-center mb-3">
+              <button type="button" class="btn btn-primary">Next</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,213 @@
+
+  .custom-px-75{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+
+#staticUI .form {
+    padding: 50px 150px 70px 70px;
+}
+
+#staticUI img.img-face{
+height: auto;
+// height: 60px;
+}
+
+
+
+.bg-light{
+    background-color: #f6f9fc !important;
+    border-color: #f6f9fc !important;
+}
+
+.content-left-wrapper{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    min-height: 100%;
+    text-align: center;
+    position: relative;
+    background: 0 0;
+    padding: 60px 50px 45px 50px;
+}
+
+.content-left-wrapper img{
+    height: 75px;
+}
+
+.content-right {
+    padding: 0px;
+}
+
+/*ui fix start */
+#slide1{
+    position: relative;
+    margin-top: 30px;
+    color: red;
+    overflow: hidden;
+}
+
+#slide1 fieldset{
+    // padding: 50px 150px 70px 70px;
+    width: 100%;
+    // min-height: 400px;
+}
+
+#slide1 fieldset:not(:first-of-type) {
+    display: none;
+}
+
+/*ui fix ebd */
+
+
+
+/*FORM STYLING*/
+
+#msform {
+    // text-align: center;
+    position: relative;
+    margin-top: 30px;
+    color: red;
+}
+
+#msform fieldset {
+    // padding: 50px 150px 70px 70px;
+    width: 100%;
+    // min-height: 400px;
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+.fs-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+}
+#progressbar li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    letter-spacing: 1px;
+}
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 24px;
+    height: 24px;
+    line-height: 26px;
+    display: block;
+    font-size: 12px;
+    color: #333;
+    background: white;
+    border-radius: 25px;
+    margin: 0 auto 10px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+    background: #ee0979;
+    color: white;
+}
+#progressbar li.inactive:before{
+    background: burlywood;
+    color: #000;
+}
+fieldset {
+   /* for chrome and safari*/
+  -webkit-animation-duration: .25ms;-webkit-animation-name: slidein;
+   /*for firefox*/
+  -moz-animation-duration: 1s;-moz-animation-name: slidein;
+   /* for opera*/
+   -o-animation-duration: 1s;-o-animation-name: slidein;
+  /* Standard syntax*/
+      animation-duration: 1s;animation-name: slidein;
+  }
+   @-webkit-keyframes slidein {
+        from { margin-right:100%;width:300%; }
+        to { margin-right: 0%;width: 100%; }
+  }
+  @-moz-keyframes slidein {
+           from {
+               margin-left: 100%;width: 300%;
+           }
+           to {
+               margin-left: 0%; width: 100%;
+           }
+    }
+  @-o-keyframes slidein {
+           from {
+               margin-left: 100%;width: 300%;
+           }
+           to {
+               margin-left: 0%;width: 100%;
+           }
+  }
+  @keyframes slidein {
+           from {
+               margin-left: 100%;width: 300%;
+           }
+           to {
+               margin-left: 0%;width: 100%;
+           }
+  }
+
+  .btn-outline-primary:hover{
+      background-color: #e9ecfa;
+      color: #525f7f;
+  }
+
+  .progress-bar-striped{
+      background-image: none;
+  }
+
+
+
+
+
+
+@media(min-width: 992px) {
+    .btn.btn-btn-primary,
+        .btn.btn-btn-primary {
+            padding: 1rem 1.25rem;
+        }
+    
+    }

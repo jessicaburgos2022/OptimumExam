@@ -1,0 +1,436 @@
+<div class="header pb-8 pt-5 pt-md-8 bg-gradient-info">
+    <div class="container-fluid">
+        <div class="header-body">
+            <!-- Card stats -->
+        </div>
+    </div>
+</div>
+<div class="container-fluid mt--7">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+            <div class="card shadow border-0">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h3 class="mb-0">Users Account</h3>
+                        </div>
+                        <div class="col text-right">
+                            <!-- <button class="btn btn-sm btn-primary" (click)="open(content)">Add User</button> -->
+                            <button class="btn btn-sm btn-info" (click)="open(content)">Add User</button>
+                            <button class="btn btn-sm btn-default" (click)="openuploadModal(contentUpload)">Upload
+                                User</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body p-lg-4">
+                    <div class="table-responsive">
+                        <table class="table align-items-center table-flush">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Username</th>
+                                    <th scope="col">Email Address</th>
+                                    <th scope="col">Code</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col" class="text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="media align-items-center">
+                                            <a href="javascript:void(0)" class="avatar rounded-circle mr-3">
+                                                <img alt="Image placeholder" src="../assets/img/user/userimage.jpg">
+                                            </a>
+                                            <div class="media-body">
+                                                <span class="mb-0 text-sm">@username1</span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td>emailuser1@gmail.com</td>
+                                    <td>
+                                        USR00001
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-dot">
+                                            <i class="bg-success"></i> active
+                                        </span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="#" class="font-weight-bold ml-3">
+                                            <i class="fa fa-edit" style="font-size: 16px;"></i>
+                                        </a>
+                                        <a href="#" class="font-weight-bold ml-3 text-danger">
+                                            <i class="fa fa-trash" style="font-size: 16px;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="media align-items-center">
+                                            <a href="javascript:void(0)" class="avatar rounded-circle mr-3">
+                                                <img alt="Image placeholder" src="../assets/img/user/userimage.jpg">
+                                            </a>
+                                            <div class="media-body">
+                                                <span class="mb-0 text-sm">@username2</span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td>emailuser2@gmail.com</td>
+                                    <td>
+                                        USR00002
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-dot">
+                                            <i class="bg-success"></i> active
+                                        </span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="#" class="font-weight-bold ml-3">
+                                            <i class="fa fa-edit" style="font-size: 16px;"></i>
+                                        </a>
+                                        <a href="#" class="font-weight-bold ml-3 text-danger">
+                                            <i class="fa fa-trash" style="font-size: 16px;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="media align-items-center">
+                                            <a href="javascript:void(0)" class="avatar rounded-circle mr-3">
+                                                <img alt="Image placeholder" src="../assets/img/user/userimage.jpg">
+                                            </a>
+                                            <div class="media-body">
+                                                <span class="mb-0 text-sm">@username3</span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td>emailuser3@gmail.com</td>
+                                    <td>
+                                        USR00003
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-dot">
+                                            <i class="bg-success"></i> active
+                                        </span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="#" class="font-weight-bold ml-3">
+                                            <i class="fa fa-edit" style="font-size: 16px;"></i>
+                                        </a>
+                                        <a href="#" class="font-weight-bold ml-3 text-danger">
+                                            <i class="fa fa-trash" style="font-size: 16px;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="media align-items-center">
+                                            <a href="javascript:void(0)" class="avatar rounded-circle mr-3">
+                                                <img alt="Image placeholder" src="../assets/img/user/userimage.jpg">
+                                            </a>
+                                            <div class="media-body">
+                                                <span class="mb-0 text-sm">@username4</span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td>emailuser4@gmail.com</td>
+                                    <td>
+                                        USR00004
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-dot">
+                                            <i class="bg-success"></i> active
+                                        </span>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <a href="#" class="font-weight-bold ml-3">
+                                            <i class="fa fa-edit" style="font-size: 16px;"></i>
+                                        </a>
+                                        <a href="#" class="font-weight-bold ml-3 text-danger">
+                                            <i class="fa fa-trash" style="font-size: 16px;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="media align-items-center">
+                                            <a href="javascript:void(0)" class="avatar rounded-circle mr-3">
+                                                <img alt="Image placeholder" src="../assets/img/user/userimage.jpg">
+                                            </a>
+                                            <div class="media-body">
+                                                <span class="mb-0 text-sm">@username5</span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td>emailuser5@gmail.com</td>
+                                    <td>
+                                        USR00005
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-dot">
+                                            <i class="bg-success"></i> active
+                                        </span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="#" class="font-weight-bold ml-3">
+                                            <i class="fa fa-edit" style="font-size: 16px;"></i>
+                                        </a>
+                                        <a href="#" class="font-weight-bold ml-3 text-danger">
+                                            <i class="fa fa-trash" style="font-size: 16px;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <ul class="pagination justify-content-end mb-0">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="javascript:void(0)" tabindex="-1">
+                                <i class="fas fa-angle-left"></i>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link" href="javascript:void(0)">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">2 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">
+                                <i class="fas fa-angle-right"></i>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<ng-template #content let-modal>
+    <div class="card shadow border-0 bg-secondary">
+        <div class="card-header py-3">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="mb-0">Add User</h3>
+                </div>
+                <div class="col text-right">
+                    <button type="button" class="btn btn-sm p-0 shadow-none" (click)="modal.dismiss('Cross click')">
+                        <i class="fa fa-times" style="font-size: 20px;"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body p-lg-5">
+            <div class="row">
+                <div class="col-12">
+                    <form role="form">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <div class="input-group input-group-alternative mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                                        </div>
+                                        <input class="form-control" placeholder="Username" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <div class="input-group input-group-alternative mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                        </div>
+                                        <input class="form-control" placeholder="Email" type="email">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                                        </div>
+                                        <input class="form-control" placeholder="Code" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-12 mt-3 text-center">
+                    <button type="button" class="btn btn-primary w-100" aria-label="Close"
+                        (click)="modal.dismiss('Cross click')">
+                        Proceed</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</ng-template>
+
+
+<ng-template #contentUpload let-modal>
+
+    <div class="card shadow border-0">
+        <div class="card-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="mb-0">Upload</h3>
+                </div>
+                <div class="col text-right">
+                    <a href="#!" class="btn btn-sm btn-primary">Import Users</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card-body p-lg-5">
+
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <div class="drop-box">
+                        <h4 class=" font-weight-normal">
+                            <span class="text-muted">Drop your file(s) here or </span>
+                            <a href="#" class="font-weight-bold">browse</a>
+                        </h4>
+                        <small class="font-weight-bold pt-3">Max. File Size: 5GB</small>
+                    </div>
+
+                </div>
+
+                <div class=" col-12 mb-3">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-body px-0 pb-0">
+                            <div class="upload">
+
+                                <div class="row justify-content-between mb-2">
+                                    <div class="col-auto  upload-info">
+                                        <span class="font-weight-bold small">Uploading</span>
+                                        <small class="d-block text-muted">68% - 12 seconds remaining</small>
+                                    </div>
+
+                                    <div class="col-auto btn-play">
+                                        <a href="#" class="font-weight-bold" style="font-size: 12px;">
+                                            <i class="ni ni-button-pause"></i>
+                                        </a>
+                                        <a href="#" class="font-weight-bold ml-3">
+                                            <i class="fa fa-times" style="font-size: 16px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                                <div class="progress">
+                                    <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                        class="progress-bar bg-gradient-success" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 mb-3 text-center">
+                    <button type="button" class="btn btn-link btn-sm" (click)="isMenuCollapsed = !isMenuCollapsed">View
+                        All Files <i class="fa fa-chevron-down v-align-middle"></i></button>
+                </div>
+
+
+                <div [ngbCollapse]="isMenuCollapsed" class="collapse col-12">
+                    <div class="table-responsive">
+                        <table class="table align-items-center table-flush">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">FileName</th>
+                                    <th scope="col">File Size</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col">File-name-1.csv</td>
+                                    <td class="text-center">10.kb</td>
+                                    <th>
+                                        <a href="#" class="font-weight-bold ml-3 text-light">
+                                            <i class="fa fa-trash" style="font-size: 16px;"></i>
+                                        </a>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>File-name-2.csv</td>
+                                    <td class="text-center">50.kb</td>
+                                    <th>
+                                        <a href="#" class="font-weight-bold ml-3 text-light">
+                                            <i class="fa fa-trash" style="font-size: 16px;"></i>
+                                        </a>
+                                    </th>
+                                </tr>
+                                <tr class="text-danger">
+                                    <th>File-name-3.csv</th>
+                                    <th class="text-center">50.2GB</th>
+                                    <th>
+                                        <a href="#" class="font-weight-bold ml-3 text-light">
+                                            <i class="fa fa-trash" style="font-size: 16px;"></i>
+                                        </a>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>File-name-4.csv</td>
+                                    <td class="text-center">50.kb</td>
+                                    <th>
+                                        <a href="#" class="font-weight-bold ml-3 text-light">
+                                            <i class="fa fa-trash" style="font-size: 16px;"></i>
+                                        </a>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</ng-template>
+
+
+<!--- Sample UI -->
+<!-- Page content -->
+<div class="container mt--7 d-none">
+    <!-- Table -->
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+            <h1>Angular Dropzone File Upload Example - ItSolutionStuff.com</h1>
+
+            <ngx-dropzone (change)="onSelect($event)">
+                <ngx-dropzone-label>Drop files here!</ngx-dropzone-label>
+                <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+                    <!-- <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label> -->
+                    <ngx-dropzone-label>
+                        <img class="img-face" alt="face" src="assets/img/icons/survey/selected/1.png">
+                    </ngx-dropzone-label>
+                </ngx-dropzone-preview>
+            </ngx-dropzone>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- https://codepen.io/aaroniker/pen/QXxexJ -->

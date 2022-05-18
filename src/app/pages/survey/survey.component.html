@@ -1,0 +1,169 @@
+<div class="header bg-gradient-info py-7 py-lg-8">
+  <div class="container">
+    <div class="header-body text-center mb-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-6">
+          <h1 class="text-white">Survey Form</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Page content -->
+<div class="container mt--8 pb-5">
+  <!-- Table -->
+  <div class="row justify-content-center">
+    <div class="col-lg-9 col-md-8">
+      <div class="card bg-secondary shadow border-0">
+        <div class="card-header p-0">
+          <ngb-progressbar [value]="progressbar" type="success" class="mb-0"></ngb-progressbar>
+        </div>
+        <div class="card-body px-lg-5 py-lg-5" id="staticUI">
+
+
+
+          <!-- Slide 1 -->
+          <div class="wrapper overflow-hidden">
+            <form [formGroup]="radioGroupForm">
+              <fieldset *ngIf="step == 1" class="overflow-hidden">
+                <div class="row">
+                  <div class="col-12 text-center mb-5">
+                    <h2 class="text-muted">What do you think about the new movie ?</h2>
+                  </div>
+                  <div class="col-12 mb-3 text-center">
+                    <div class="btn-group d-block d-lg-inline-flex" role="group" ngbRadioGroup name="radioGroupForm"
+                      formControlName="model">
+                      <label ngbButtonLabel class="btn-outline-primary border-0 rounded" (click)="setSelectedRadio(1)">
+                        <input ngbButton type="radio" class="d-none" [value]="1">
+                        <img class="img-face" alt="face"
+                          src="{{isRadioSelected(1) ? 'assets/img/icons/survey/selected/1.png' : 'assets/img/icons/survey/default/1.png' }}" />
+                        <br>
+                        <small>Unimpress</small>
+                      </label>
+                      <label ngbButtonLabel class="btn-outline-primary border-0 rounded" (click)="setSelectedRadio(2)">
+                        <input ngbButton type="radio" class="d-none" value="2">
+                        <img class="img-face" alt="face"
+                          src="{{isRadioSelected(2) ? 'assets/img/icons/survey/selected/2.png' : 'assets/img/icons/survey/default/2.png' }}" />
+                      </label>
+                      <label ngbButtonLabel class="btn-outline-primary border-0 rounded" (click)="setSelectedRadio(3)">
+                        <input ngbButton type="radio" class="d-none" [value]="3">
+                        <img class="img-face" alt="face"
+                          src="{{isRadioSelected(3)
+                                                ? 'assets/img/icons/survey/selected/3.png' : 'assets/img/icons/survey/default/3.png' }}" />
+                      </label>
+                      <label ngbButtonLabel class="btn-outline-primary border-0 rounded">
+                        <input ngbButton type="radio" class="d-none" [value]="4" (click)="setSelectedRadio(4)">
+                        <img class="img-face" alt="face"
+                          src="{{isRadioSelected(4) ? 'assets/img/icons/survey/selected/4.png' : 'assets/img/icons/survey/default/4.png' }}" />
+                      </label>
+                      <label ngbButtonLabel class="btn-outline-primary border-0 rounded" (click)="setSelectedRadio(5)">
+                        <input ngbButton type="radio" class="d-none" value="5">
+                        <img class="img-face" alt="face"
+                          src="{{isRadioSelected(5) ? 'assets/img/icons/survey/selected/5.png' : 'assets/img/icons/survey/default/5.png' }}" />
+                        <br>
+                        <small>Very Impressed</small>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- <hr class="my-5" /> -->
+                <div class="row mt-5">
+                  <div class="col-12 text-center mb-3">
+                    <button type="button" class="btn btn-primary" (click)="next()">Next</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <!-- Slide 2 -->
+          <div class="wrapper overflow-hidden">
+            <form>
+              <fieldset *ngIf="step == 2" class="overflow-hidden">
+                <div class="row">
+                  <div class="col-12 text-center mb-5">
+                    <h2 class="mb-0 text-muted" >Tell us your thoughts</h2>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <textarea rows="5" class="form-control form-control-alternative" placeholder="Type Here"></textarea>
+                    <!-- <textarea rows="4" class="form-control form-control-alternative" placeholder="Type Here"
+                    formControlName="message"></textarea> -->
+                    <!-- <div *ngIf="step && thoughtsGroupForm.controls.message.errors">
+                      <div *ngIf="thoughtsGroupForm.message.errors?.required" class="small">Address is required</div>
+                    </div> -->
+
+                  </div>
+                </div>
+                <!-- <hr class="my-5" /> -->
+                <div class="row mt-5">
+                  <div class="col-12 text-center mb-3">
+                    <button type="button" class="btn btn-link" (click)="previous()">Previous</button>
+                    <button type="button" class="btn btn-primary" (click)="next()">Next</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+
+          <!-- Slide 3 -->
+          <div class="wrapper overflow-hidden">
+            <form>
+              <fieldset *ngIf="step == 3" class="overflow-hidden">
+                <div class="row">
+                  <div class="col-12 text-center mb-5">
+                    <h2 class="text-muted">Slide this progress bar for fun!</h2>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <ngb-progressbar [value]="progressbar2" type="success"></ngb-progressbar>
+                  </div>
+
+                  <div class="col-12">
+                    <button type="button" class="btn btn-outline-primary" (click)="slideProgressBar()">Press to
+                      Slide</button>
+                  </div>
+                </div>
+
+                <!-- <hr class="my-5" /> -->
+
+                <div class="row mt-5">
+                  <div class="col-12 text-center mb-3">
+                    <button type="button" class="btn btn-link" (click)="previous()">Previous</button>
+                    <button type="button" class="btn btn-primary" (click)="submit()">Submit</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+
+          <!-- Last Slide -->
+          <div class="wrapper overflow-hidden">
+            <form>
+              <fieldset *ngIf="step == 4" class="overflow-hidden">
+                <div class="row">
+                  <div class="col-12 text-center my-5">
+                    <i class="far fa-check-circle text-success mb-3" style="font-size: 5rem;"></i>
+                    <h2>Request successfully sent!</h2>
+                    <h3 class="font-weight-light">Thank you for your time </h3>
+                  </div>
+                </div>
+
+                <!-- <hr class="my-4" /> -->
+
+                <div class="row">
+                  <div class="col-12 text-center mb-3">
+                    <button type="button" class="btn btn-secondary" (click)="previous()">Go Back</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
