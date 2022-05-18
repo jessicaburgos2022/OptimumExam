@@ -1,48 +1,68 @@
-// import { Routes } from '@angular/router';
-
-// import { DashboardComponent } from '../../pages/dashboard/dashboard.component';
-// import { TablesComponent } from '../../pages/tables/tables.component';
-// import { PlainSurveyComponent } from '../../pages/plain-survey/plain-survey.component';
-// import { UsersAccountComponent } from '../../pages/users-account/users-account.component';
-
-
-// export const AdminLayoutRoutes: Routes = [
-//     { path: 'dashboard',      component: DashboardComponent },
-//     { path: 'tables',         component: TablesComponent },
-//     { path: 'plain-survey',      component: PlainSurveyComponent },
-//     { path: 'users-account',      component: UsersAccountComponent },
-// ];
-
-
 import { AdminLayoutComponent } from "./admin-layout.component";
+import { DashboardComponent } from "src/app/pages/dashboard/dashboard.component";
+import { TablesComponent } from "src/app/pages/tables/tables.component";
+import { UsersAccountComponent } from "src/app/pages/users-account/users-account.component";
+import { SurveyComponent } from "src/app/pages/survey/survey.component";
+import { Routes } from '@angular/router';
+import { PlainSurveyComponent } from "src/app/pages/plain-survey/plain-survey.component";
+import { ThemeSettingsComponent } from "src/app/pages/theme-settings/theme-settings.component";
 
-import { Routes } from "@angular/router";
+// Guards
+import { AuthGuard } from "src/app/components/auth.guard";
+import { UserResolver } from "src/app/resolvers/user.resolver";
 
-import { DashboardComponent } from '../../pages/dashboard/dashboard.component';
-import { TablesComponent } from '../../pages/tables/tables.component';
-import { PlainSurveyComponent } from '../../pages/plain-survey/plain-survey.component';
-import { UsersAccountComponent } from '../../pages/users-account/users-account.component';
-
-export const routes: Routes = [
+export const AdminLayoutRoutes: Routes = [
   {
-    path: "",
+    path: '',
+    canActivate: [AuthGuard],
+    resolve: { user: UserResolver },
     component: AdminLayoutComponent,
     children: [
       {
-        path: "",
-        redirectTo: "dashboard",
-        pathMatch: "full",
+        path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full'
       },
       {
-        path: "dashboard",
+        path: 'dashboard',
         component: DashboardComponent,
-        data: { returnUrl: window.location.pathname },
+        data: {returnUrl: window.location.pathname}
       },
       {
-        path: "tables",
+        path: 'tables',
         component: TablesComponent,
-        data: { returnUrl: window.location.pathname },
+        data: {returnUrl: window.location.pathname}
       },
-    ],
-  },
-];
+
+      {
+        path: 'user-account',
+        component: UsersAccountComponent,
+        data: {returnUrl: window.location.pathname}
+      },
+
+      {
+        path: 'survey',
+        component: SurveyComponent,
+        data: {returnUrl: window.location.pathname}
+      },
+
+
+      {
+        path: 'plain-survey',
+        component: PlainSurveyComponent,
+        data: {returnUrl: window.location.pathname}
+      },
+
+      {
+        path: 'user-account',
+        component: UsersAccountComponent,
+        data: {returnUrl: window.location.pathname}
+      },
+      {
+        path: 'theme-settings',
+        component: ThemeSettingsComponent,
+        data: {returnUrl: window.location.pathname}
+      },
+    
+    ]
+  }];

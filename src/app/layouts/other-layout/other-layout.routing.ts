@@ -1,60 +1,16 @@
 import { Routes } from "@angular/router";
+import { LoginComponent } from "../../pages/login/login.component";
 
-// import { SurveyComponent } from "../../pages/survey/survey.component";
-import { MyCounterComponent } from "../../my-counter/my-counter.component"; // for testing
-import { LoginComponent } from "../../pages/login/login.component"; // for testing
-
-import { OtherLayoutComponent } from "./other-layout.component";
-
-
-
-
-
-export const routes: Routes = [
-
-    
+export const OtherLayoutRoutes: Routes = [
   {
     path: "",
     redirectTo: "login",
     pathMatch: "full",
   },
 
-
-
-
-//   {
-//     path: "public/login",
-//     component: LoginComponent,
-//     data: { returnUrl: window.location.pathname },
-//   },
-//   {
-//     path: "survey",
-//     component: SurveyComponent,
-//   },
+  {
+    path: "login",
+    component: LoginComponent,
+    data: { returnUrl: window.location.pathname },
+  },
 ];
-
-
-
-// export const routes: Routes = [
-//   {
-//     path: "",
-//     component: OtherLayoutComponent,
-//     children: [
-//       {
-//         path: "",
-//         redirectTo: "login",
-//         pathMatch: "full",
-//       },
-//       {
-//         path: "login",
-//         component: LoginComponent,
-//         data: { returnUrl: window.location.pathname },
-//       },
-//       {
-//         path: "survey",
-//         component: SurveyComponent,
-//       },
-//     ],
-//   },
-// ];
-
