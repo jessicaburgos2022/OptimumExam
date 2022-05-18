@@ -1,4 +1,7 @@
-import { Component, ViewChild } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
+
+// inject sample services
+import { SampleServiceService } from "src/app/service/sample-service.service";
 
 import {
   ChartComponent,
@@ -46,12 +49,14 @@ export type PolarChartOptions = {
   templateUrl: "./dashboard.component.html",
   styleUrls: ["./dashboard.component.scss"],
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
   @ViewChild("chart") chart: ChartComponent;
   public barChartOptions: Partial<BarChartOptions>;
   public PolarChartOptions: Partial<PolarChartOptions>;
 
-  constructor() {
+  constructor(
+    public sampleservices: SampleServiceService
+  ) {
     this.barChartOptions = {
       
       series: [
@@ -142,5 +147,14 @@ export class DashboardComponent {
       },
       
     };
+  }
+
+
+  ngOnInit() {
+    var body = document.getElementsByTagName("body")[0];
+    var cardheader = body.getElementsByClassName("card-header");
+    for(var i = 0; i < cardheader.length; i++ ){
+      cardheader[i].classList.add(this.sampleservices.newBackgroundColor)
+    }
   }
 }

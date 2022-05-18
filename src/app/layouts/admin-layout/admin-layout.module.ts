@@ -32,25 +32,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {NgApexchartsModule} from 'ng-apexcharts';
 
 
-// const routes: Routes = [
-//   {
-// 				path: '',
-// 				redirectTo: 'dashboard',
-// 				pathMatch: 'full'
-// 			},
-//       {
-// 				path: 'dashboard',
-// 				component: DashboardComponent,
-// 				data: {returnUrl: window.location.pathname}
-// 			},
-//       {
-// 				path: 'tables',
-// 				component: TablesComponent,
-// 				data: {returnUrl: window.location.pathname}
-// 			}
-//   ];
-
-
+import { ThemeSettingsComponent } from '../../pages/theme-settings/theme-settings.component';
 
   const routes: Routes = [
     {
@@ -95,6 +77,11 @@ import {NgApexchartsModule} from 'ng-apexcharts';
         {
           path: 'user-account',
           component: UsersAccountComponent,
+          data: {returnUrl: window.location.pathname}
+        },
+        {
+          path: 'theme-settings',
+          component: ThemeSettingsComponent,
           data: {returnUrl: window.location.pathname}
         },
         

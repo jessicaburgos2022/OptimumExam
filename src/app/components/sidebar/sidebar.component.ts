@@ -14,6 +14,7 @@ export const ROUTES: RouteInfo[] = [
     { path: 'survey', title: 'Survey',  icon:'ni-single-copy-04 text-yellow', class: '' },
     { path: 'plain-survey', title: 'Plain survey',  icon:'ni-single-copy-04 text-blue', class: '' },
     { path: 'user-account', title: 'Users account',  icon:'fa fa-users text-orange', class: '' },
+    { path: 'theme-settings', title: 'Theme Settings',  icon:'fa fa-users text-orange', class: '' },
 ];
 
 @Component({

@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
+// inject sample services
+import { SampleServiceService } from "src/app/service/sample-service.service";
 
 @Component({
   selector: 'app-users-account',
@@ -20,10 +23,19 @@ export class UsersAccountComponent implements OnInit {
   isAddUser: boolean = false;
 
 
-  constructor(private http: HttpClient, private modalService: NgbModal) { }
+  constructor(private http: HttpClient, private modalService: NgbModal, public sampleservices: SampleServiceService) { }
 
-  ngOnInit(): void {
+  // ngOnInit(): void {
+  // }
+
+  ngOnInit() {
+    var body = document.getElementsByTagName("body")[0];
+    var cardheader = body.getElementsByClassName("card-header");
+    for(var i = 0; i < cardheader.length; i++ ){
+      cardheader[i].classList.add(this.sampleservices.newBackgroundColor)
+    }
   }
+
 
   onSelect(event) {
     console.log(event);

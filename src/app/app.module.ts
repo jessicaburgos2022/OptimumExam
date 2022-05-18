@@ -20,7 +20,6 @@ import { userReducer } from "./reducers/user.reducer";
 
 import { AuthGuard } from "./components/auth.guard";
 import { UserResolver } from "./resolvers/user.resolver";
-
 const combinedReducer = {
   count: counterReducer,
   user: userReducer,

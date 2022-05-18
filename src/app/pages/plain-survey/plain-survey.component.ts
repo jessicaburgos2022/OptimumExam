@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { NgbProgressbarConfig } from "@ng-bootstrap/ng-bootstrap";
 
 
+// inject sample services
+import { SampleServiceService } from "src/app/service/sample-service.service";
+
 import {
   FormControl,
   FormGroup,
@@ -19,7 +22,7 @@ export class PlainSurveyComponent implements OnInit {
   radioButtonValue = 1;
   progressbar2 = "200";
 
-  constructor(private formBuilder: FormBuilder, config: NgbProgressbarConfig) {
+  constructor(private formBuilder: FormBuilder, config: NgbProgressbarConfig, public sampleservices: SampleServiceService) {
 
     this.setSelectedRadio(1);
 
@@ -32,6 +35,13 @@ export class PlainSurveyComponent implements OnInit {
     this.radioGroupForm = this.formBuilder.group({
       model: 1,
     });
+
+    var body = document.getElementsByTagName("body")[0];
+    var cardheader = body.getElementsByClassName("card-header");
+    for(var i = 0; i < cardheader.length; i++ ){
+      cardheader[i].classList.add(this.sampleservices.newBackgroundColor)
+    }
+
   }
 
   setSelectedRadio(val: number) {
